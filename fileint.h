@@ -6,4 +6,4 @@
 bool addFile(char *, int *);
 bool writeSum(char *, int);
 
-#endif /*FILEINT_H*/
+#endif /* FILEINT_H */

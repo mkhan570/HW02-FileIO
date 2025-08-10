@@ -9,4 +9,4 @@
 bool countChar(char *, int[][ALPHABET_SIZE_W_SPACE]);
 void printCounts(int[][ALPHABET_SIZE_W_SPACE]);
 
-#endif /*FILECHAR_H*/
+#endif /* FILECHAR_H */

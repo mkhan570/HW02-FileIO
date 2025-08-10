@@ -23,14 +23,7 @@ You need to implement the function:
 bool countChar(const char *filename, int counts[][]);
 ```
 
-### **Instructions:**
-
-1. Open the file specified by `filename` for reading.
-   - If the file cannot be opened, return `false` and **do not call** `fclose()`.
-
-2. Initialize all elements of the `counts` array to zero.
-
-3. Read each successive pair of letters and increment the appropriate
+In this function, you will read each successive pair of letters and increment the appropriate
    `counts[first_letter_index][second_letter_index]` entry.
    - The first index (0–25) corresponds to the first letter in the pair (`a`=0, `b`=1, …, `z`=25).
    - The second index (0–25) corresponds to the second letter in the pair, and index 26 is reserved for when the last letter has **no partner** (odd number of letters).
@@ -44,9 +37,20 @@ bool countChar(const char *filename, int counts[][]);
    - `"ee"` → `counts[4][4]++`
    - `"ce"` → `counts[2][4]++`
 
-   Again, if there is a leftover single letter at the end, increment its count at index 26 for the second position.
+### **Instructions:**
 
-4. Stop reading at the end of the file.
+1. Open the file specified by `filename` for reading.
+   - If the file cannot be opened, return `false` and **do not call** `fclose()`.
+
+2. Read each successive pair of letters and increment the appropriate entry in  `counts[][]`.
+   1. Create a loop where one character is read each iteration.
+   2. If the current character is not alphanumeric (`[a-z]` or `[A-Z]`), skip it.
+   3. If the current alphanumeric character is first in the current pair, store it's value.
+   4. If the current alphanumeric character is second in the current pair, increment the pair in `counts[][]`.
+
+3. Stop reading at the end of the file.
+
+4. If there is a leftover single letter at the end, increment its count at index 26 for the second position.
 
 5. Close the file using `fclose()` after processing if the file opened successfully and return `true`.
 
@@ -95,9 +99,6 @@ void printCounts(const int counts[][]);
 **Hint 1:** fill out the helper function `index_to_char()`, and use it! This is an operation you will have to do multiple times so it nice to have the logic separated.
 
 **Hint 2:** You must always know the size an array before iterating through it to avoid an out-of-bounds array access. Luckily, these are defined for you with the object-like macros `ALPHABET_SIZE` and `ALPHABET_SIZE_W_SPACE` in `filechar.h`.More info on [out-of-bound array access](https://www.geeksforgeeks.org/cpp/accessing-array-bounds-ccpp/) and [macros](https://www.geeksforgeeks.org/c/macros-and-its-types-in-c-cpp/).
-
-
-
 
 ## **Part 2: Reading and Summing Integers from a File**
 

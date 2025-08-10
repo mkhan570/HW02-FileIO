@@ -1,9 +1,9 @@
 /* PLEASE EDIT THIS FILE */
 
-#include <stdio.h>
-#include <stdbool.h>
 #include "fileint.h"
 
+#include <stdbool.h>
+#include <stdio.h>
 
 bool addFile(char *filename, int *sum) {
   /* BEGIN STUDENT ANSWER */
@@ -13,7 +13,6 @@ bool addFile(char *filename, int *sum) {
   /* END STUDENT ANSWER */
   return true;
 }
-
 
 bool writeSum(char *filename, int sum) {
   /* BEGIN STUDENT ANSWER */

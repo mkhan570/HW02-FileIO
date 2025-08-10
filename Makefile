@@ -1,6 +1,4 @@
-# ***
-# *** DO NOT modify this file 
-# ***
+# MODIFICATION NOT NECESSARY (unless you want to add more test cases)
 
 WARNING = -Wall -Wshadow --pedantic
 ERROR = -Wvla -Werror

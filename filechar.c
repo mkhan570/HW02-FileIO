@@ -1,15 +1,16 @@
-/* PLEASE EDIT THIS FILE*/
+/* PLEASE EDIT THIS FILE */
+
+#include "filechar.h"
 
 #include <ctype.h>
-#include <stdio.h>
 #include <stdbool.h>
-#include "filechar.h"
+#include <stdio.h>
 
 /* BEGIN STUDENT ANSWER HELPER FUNCTIONS */
 
 static inline int char_to_index(char character) {
-    // turn both [a-z] and [A-Z] into the index used to increment their spots in the array.
-
+  // turn both [a-z] and [A-Z] into the index used to increment their spots in
+  // the array.
 }
 
 static inline char index_to_char(int index) {
@@ -26,11 +27,10 @@ bool countChar(char *filename, int counts[][ALPHABET_SIZE_W_SPACE]) {
   /* END STUDENT ANSWER */
 }
 
-
 void printCounts(int counts[][ALPHABET_SIZE_W_SPACE]) {
   /* BEGIN STUDENT ANSWER */
 
   // complete as described in the README
 
-  /* END STUDENT ANSWER*/
+  /* END STUDENT ANSWER */
 }
