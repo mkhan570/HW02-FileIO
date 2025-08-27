@@ -3,6 +3,8 @@
 #ifndef FILECHAR_H
 #define FILECHAR_H
 
+#include <stdbool.h>
+
 #define ALPHABET_SIZE (26)
 #define ALPHABET_SIZE_W_SPACE (ALPHABET_SIZE + 1)
 

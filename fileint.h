@@ -3,6 +3,8 @@
 #ifndef FILEINT_H
 #define FILEINT_H
 
+#include <stdbool.h>
+
 bool addFile(char *, int *);
 bool writeSum(char *, int);
 
