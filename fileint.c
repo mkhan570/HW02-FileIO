@@ -48,7 +48,12 @@ bool writeSum(char *filename, int sum)
     return false;
   }
 
-  fprintf(fptr, "%d", sum);
+  if (fprintf(fptr, "%d\n", sum) <0)
+  {
+    // Close the file using fclose() if it opened successfully + Return true
+    fclose(fptr); 
+    return false;
+  }
 
   // Close the file using fclose() if it opened successfully + Return true
   fclose(fptr); 

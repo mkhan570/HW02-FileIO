@@ -99,31 +99,33 @@ bool countChar(char *filename, int counts[][ALPHABET_SIZE_W_SPACE])
   return true;
 }
 
-void printCounts(int counts[][ALPHABET_SIZE_W_SPACE]) {
+void printCounts(int counts[][ALPHABET_SIZE_W_SPACE]) 
+{
   /* BEGIN STUDENT ANSWER */
   // Hint 1: fill out the helper function index_to_char(), and use it! This is an operation you will have to do multiple times so it nice to have the logic separated. <- done prior
   int indexP1 = 0;
-  int indexP2 = 0;
+  int indexP2;
   int count;
   char character1;
   char character2;
   // Hint 2: You must always know the size an array before iterating through it to avoid an out-of-bounds array access. Luckily, these are defined for you with the object-like macros ALPHABET_SIZE and ALPHABET_SIZE_W_SPACE in filechar.h
   while (indexP1 < ALPHABET_SIZE)
   {
+    indexP2 = 0;
     while (indexP2 < ALPHABET_SIZE_W_SPACE)
     {
       count = counts[indexP1][indexP2];
-      if (count == 0)
+      if (count != 0)
       {
-        continue;
+        character1 = index_to_char(indexP1);
+        character2 = index_to_char(indexP2);
+        printf("%d, %d, %c%c, %d\n", indexP1, indexP2, character1, character2, count);
       }
       indexP2 += 1;
     }
     indexP1 += 1;
   }
-
-  character1 = index_to_char(indexP1);
-  character2 = index_to_char(indexP2);
-  printf("%d, %d, %c%c, %d\n\n", indexP1, indexP2, character1, character2, count);
-  /* END STUDENT ANSWER */
 }
+
+
+  /* END STUDENT ANSWER */
