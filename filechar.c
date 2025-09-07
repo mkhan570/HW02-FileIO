@@ -5,8 +5,6 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
-#define ALPHABET_SIZE 26 // 26 letters in the alphabet
-#define ALPHABET_SIZE_W_SPACE 27 // 26 letters & a space
 
 /* BEGIN STUDENT ANSWER HELPER FUNCTIONS */
 
