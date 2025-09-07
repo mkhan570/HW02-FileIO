@@ -162,3 +162,7 @@ Submit the following files to gradescope:
 `filechar.c`, `fileint.c`
 
 Do this through the use of the zip command: `zip hw02.zip filechar.c fileint.c`
+
+Online Sources:
+Used Google to format/view template/example for fopen, fclose, isalpha, fgetc.
+Used ChatGPT to identify the cause to an infinite loop and a missing new line character in my code.
